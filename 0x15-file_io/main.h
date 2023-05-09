@@ -1,5 +1,5 @@
-#define Main_h
-#ifndef Main_h
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <sys/stat.h>
 #include <unistd.h>
