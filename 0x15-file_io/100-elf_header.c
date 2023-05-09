@@ -286,8 +286,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		free(header);
 		close_elf(q);
-		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", 
-				exit(98);
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
+		exit(98);
 	}
 	check_elf(header->e_ident);
 	print_data(header->e_ident);
@@ -300,7 +300,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	free(header);
-	close_elf(o);
+	close_elf(q);
 	return (0);
 }
 
